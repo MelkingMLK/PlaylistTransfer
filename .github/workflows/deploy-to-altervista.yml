@@ -19,7 +19,7 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
       with:
         # L'host FTP personale di Altervista
-        server: ftp://ftp.gianluca.altervista.org  # Sostituisci 'gianluca' con il tuo nome utente Altervista
+        server: ftp://ftp.gianlucamelis.altervista.org  # Sostituisci 'gianluca' con il tuo nome utente Altervista
         # Nome utente FTP (usa un secret per sicurezza)
         username: ${{ secrets.FTP_USERNAME }}
         # Password FTP (usa un secret per sicurezza)
