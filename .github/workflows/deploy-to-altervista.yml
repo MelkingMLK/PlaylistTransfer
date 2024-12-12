@@ -27,4 +27,4 @@ jobs:
         # La directory locale da cui prendere i file (./ significa radice della repository)
         local-dir: ./
         # La directory remota su Altervista dove caricare i file (di solito /htdocs)
-        server-dir: /htdocs/
+        server-dir: /htdocs/PlaylistTransfer/
