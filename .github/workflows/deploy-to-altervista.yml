@@ -1,0 +1,30 @@
+name: Deploy to Altervista
+
+on:
+  push:
+    branches:
+      - main  # Puoi modificare 'main' con il nome della branch che desideri monitorare
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # Usa un ambiente di esecuzione su Linux
+
+    steps:
+    # Step 1: Clonare la repository su cui si esegue l'azione
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    # Step 2: Caricare i file su Altervista tramite FTP
+    - name: Upload to Altervista via FTP
+      uses: SamKirkland/FTP-Deploy-Action@4.1.0
+      with:
+        # L'host FTP personale di Altervista
+        server: ftp.gianlucamelis.altervista.org  # Sostituisci 'gianluca' con il tuo nome utente Altervista
+        # Nome utente FTP (usa un secret per sicurezza)
+        username: ${{ secrets.FTP_USERNAME }}
+        # Password FTP (usa un secret per sicurezza)
+        password: ${{ secrets.FTP_PASSWORD }}
+        # La directory locale da cui prendere i file (./ significa radice della repository)
+        local-dir: ./
+        # La directory remota su Altervista dove caricare i file (di solito /htdocs)
+        server-dir: /PlaylistTransfer/
