@@ -3,7 +3,7 @@ name: Deploy to Altervista
 on:
   push:
     branches:
-      - main  # Puoi modificare 'main' con il nome della branch che desideri monitorare
+      - master # Puoi modificare 'main' con il nome della branch che desideri monitorare
 
 jobs:
   deploy:
