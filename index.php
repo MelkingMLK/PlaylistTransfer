@@ -57,7 +57,7 @@
         <a href="#home">Home</a>
         <a href="#about">Chi Siamo</a>
         <a href="#services">Servizi</a>
-        <a href="#contact">Contatti</a>
+
     </nav>
 
     <main>
